@@ -1076,7 +1076,13 @@ hr {
 .menu-section .no-gutters {
     gap: 10px;
     display: grid !important;
-    grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+@media(max-width:768px){
+    .menu-section .no-gutters {
+       
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
 }
 
 .menu-section .no-gutters .col-lg-6 {
@@ -1106,15 +1112,26 @@ hr {
 
 .menus {
     width: 100%;
+    display: flex;
+}
+@media(max-width:768px){
+    .menus{
+        flex-direction: column;
+    }
 }
 
 .menus .menu-img {
     width: 50%;
 
 }
+@media(max-width:768px){
+    .menus .menu-img{
+       width: 100%;
+    }
+}
 
 .menus .menu-img img {
-    width: 275px;
+    width: 100%;
     height: 275px;
 }
 
@@ -1125,10 +1142,24 @@ hr {
     align-items: flex-start !important;
     letter-spacing: 1.5px;
     background-color: white;
+    position: relative;
+}
+@media (max-width:768px){
+    .menus .text{
+        width: 100%;
+    }
+}
+.menus .text .one-half{
+    width: 70%;
 }
 
 .menus .text p {
     color: var(--thirdcolor);
+}
+@media (max-width:768px){
+    .menus .text p{
+        width: 70%;
+    }
 }
 
 .menu-item {
@@ -1144,22 +1175,21 @@ hr {
 }
 
 .menu-section .menu-item:hover .one-forth {
-    background-color: var(--main-color);
+    background-color: var(--fourth-color);
 }
 
 .one-forth {
     position: absolute;
     bottom: 0px;
     right: 0px;
-    background-color: var(--fourth-color);
     width: 85px;
     height: 85px;
     display: flex;
     border-radius: 7px 40px 7px 40px;
-    color: white;
+     color: #c8a97e;;
     font-size: 17px;
-    font-weight: 700;
-    transition: all .3s linear;
+    font-weight: 900;
+    transition: all .4s linear;
     justify-content: center;
     align-items: center;
 }
