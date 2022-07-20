@@ -1,4 +1,5 @@
-
+// wow 
+new WOW().init();
 // sart stats counter number 
 const counternum = function () {
 
@@ -135,7 +136,22 @@ $('.gallery_more').click(function () {
   }
 });
 
-
-
-
+// owl 
+$('.off-content').owlCarousel({
+  loop: false,
+  margin: 10,
+  nav: true,
+  Touch: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    1000: {
+      items: 3
+    }
+  }
+})
 

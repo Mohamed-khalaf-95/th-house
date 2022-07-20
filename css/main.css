@@ -391,9 +391,9 @@ hr {
 }
 
 .landing .w-100 {
-    min-width: 100% !important;
     height: 100vh;
 }
+
 
 /* end landing  */
 /* ====================================================== */
@@ -1088,6 +1088,9 @@ hr {
 .menu-section .no-gutters .col-lg-6 {
     max-width: 100%;
 }
+.menu-section .nav-pills{
+    flex-wrap: nowrap;
+}
 
 .menu-section .nav-pills a {
     color: var(--fourth-color);
@@ -1100,6 +1103,7 @@ hr {
     transition: all .5s ease-in-out;
 }
 
+
 .menu-section .nav-pills a:hover {
     background-color: var(--fourth-color);
     color: var(--main-color);
@@ -1110,6 +1114,50 @@ hr {
     color: var(--main-color);
 }
 
+@media(max-width:768px){
+    .menu-section .nav-pills{
+        gap: 20px;
+        flex-wrap: nowrap;
+    }
+    .menu-section .nav-pills a {
+        font-size: 17px;
+     width: fit-content;
+      padding: 0;
+    
+       
+    }
+    .menu-section .nav-pills .active {
+        background-color: transparent;
+        color: var(--main-color);
+    }
+    .menu-section .nav-pills a:hover {
+        background-color: transparent;
+        color: var(--main-color);
+    }
+
+}
+@media(max-width:532px){
+    .menu-section .nav-pills{
+        gap: 13px;
+        flex-wrap: nowrap;
+    }
+    .menu-section .nav-pills a {
+        font-size: 15px;
+     width: fit-content;
+      padding: 0;
+    
+       
+    }
+    .menu-section .nav-pills .active {
+        background-color: transparent;
+        color: var(--main-color);
+    }
+    .menu-section .nav-pills a:hover {
+        background-color: transparent;
+        color: var(--main-color);
+    }
+
+}
 .menus {
     width: 100%;
     display: flex;
@@ -1613,3 +1661,7 @@ hr {
 }
 
 /* End Animation */
+
+#map {
+    height: 600px;
+  }

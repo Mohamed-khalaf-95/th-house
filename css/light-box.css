@@ -18,8 +18,18 @@
   display: block;
   box-shadow: 0 0 20px #000;
   border-radius: 1px;
-  width: 100% !important;
+  width: 100%  !important;
   height: 100% !important;
+}
+@media(max-width:768px){
+  #lightbox img {
+    max-width: 500px !important;
+    max-height: 500px !important;
+  }
+  #lightbox{
+    background: rgba(0, 0, 0, 1);
+    padding: 80px 0px;
+  }
 }
 
 body.blurred>* {
@@ -103,6 +113,12 @@ body.blurred>* {
   align-items: center;
   padding-left: 50px;
   padding-right: 50px;
+}
+@media (max-width:768px){
+  .lightbox-nav{
+   padding-left: 10px;
+   padding-right: 10px;
+  }
 }
 
 .lightbox-next {
