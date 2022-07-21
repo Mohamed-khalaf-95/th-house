@@ -137,21 +137,49 @@ $('.gallery_more').click(function () {
 });
 
 // owl 
-$('.off-content').owlCarousel({
-  loop: false,
-  margin: 10,
-  nav: true,
-  Touch: true,
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 2
-    },
-    1000: {
-      items: 3
-    }
-  }
-})
 
+
+
+var carousel = function () {
+  $('.off-content').owlCarousel({
+    loop: false,
+    margin: 10,
+    nav: true,
+    Touch: true,
+    items: 1,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  })
+  $('.user-content').owlCarousel({
+    animateOut: 'animate__fadeOut',
+    animateIn: 'animate__fadeIn',
+    center: true,
+    loop: true,
+    items: 1,
+    margin: 30,
+    stagePadding: 0,
+    nav: false,
+    autoplay: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+};
+carousel();
