@@ -10,7 +10,7 @@ mohamed khalaf
 
 :root {
     --main-color: #f0d275;
-    --secandcolor: #2c4755;
+    --secandcolor:  #c8a97e;
     --thirdcolor: #777;
     --fourth-color: #191919;
     --section-background-1: #191919b2;
@@ -203,6 +203,33 @@ hr {
 
 .main-title-2:hover {
     color: #191919;
+}
+.heading{
+    padding: 0px 15px 30px;
+    margin-bottom: 30px;
+}
+.special-heading{
+    text-align: center;
+    font-weight: normal;
+    font-size: 100px;
+    display: block;
+    margin-bottom: 0;
+    color: #c8a97e;
+    font-family: "Great Vibes", cursive;
+}
+.sub-special-heading{
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 1.5px;
+    margin-top: -50px;
+    line-height: 1.1;
+    color: var(--thirdcolor);
+}
+@media (max-width:532px){
+    .sub-special-heading{
+        font-size: 30px;
+        margin-top: -50px;
+    }
 }
 
 /* end globl rulls */
@@ -449,37 +476,6 @@ hr {
     transition: all .3s linear;
 }
 
-.about-title {
-    margin-bottom: 15px;
-}
-
-.about-title h2 {
-    font-weight: normal;
-    font-size: 100px;
-    display: block;
-    margin-bottom: 0;
-
-    color: #c8a97e;
-    font-family: "Great Vibes", cursive;
-}
-
-.about-title h3 {
-    font-size: 50px;
-    letter-spacing: 1.5px;
-    margin-top: -64px;
-    /* width: 330px; */
-    line-height: 1.1;
-    color: rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width:992px) {
-    .about-title h3 {
-        width: fit-content;
-        font-size: 30px;
-        font-weight: 900;
-    }
-}
-
 .about-col-right .about-disc {
     color: var(--p-color);
     font-size: 17px;
@@ -503,41 +499,6 @@ hr {
 
 }
 
-.services {
-    letter-spacing: 1.5px;
-}
-
-.services .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 20px;
-}
-@media (max-width:768px){
-    .services .container {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 10px;
-    } 
-}
-.services .card h2 {
-    font-size: 30px;
-    font-weight: 500;
-}
-
-.services .card p {
-    font-size: 17px;
-    color: var(--thirdcolor);
-}
-
-.services .card {
-    padding: 30px 0 !important;
-    transition: var(--main-transition);
-    transform: scale(.9);
-}
-
-.services .card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2), 0 0 0 rgba(0, 0, 0, .1);
-    transform: scale(1);
-}
 
 .testimony {
     padding-top: var(--section-padding);
@@ -603,6 +564,68 @@ font-weight: 400;
 }
 /* end about  */
 /* =================================================== */
+/* start services */
+.services {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    letter-spacing: 1.5px;
+    background-color: var(--section-background);
+}
+
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+@media (max-width:768px){
+    .services .container {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 10px;
+    } 
+}
+.services .card h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.services .card p {
+    font-size: 17px;
+    color: var(--thirdcolor);
+}
+
+.services .card {
+    position: relative;
+    padding: 30px 0 !important;
+    transition: var(--main-transition);
+    overflow: hidden;
+    cursor: default;
+}
+
+.services .card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2), 0 0 0 rgba(0, 0, 0, .1);
+    transform: scale(1.02);
+}
+.services .card i{
+transition: all .3s linear;
+}
+
+.services .card:hover  i{
+color: white;
+}
+.services .card::before{
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+transition: var(--main-transition);
+}
+.services .card:hover::before{
+    box-shadow: inset 0 0 0 200px var(--main-color);
+}
+/* end services */
 /* start counter number  */
 /* Start Stats */
 .stats {
@@ -944,10 +967,6 @@ font-weight: 400;
     padding-right: 20px;
 }
 
-.special-heading {
-    color: black;
-}
-
 .offers .offers-tit {
     color: #2C353C;
     margin-bottom: 50px;
@@ -1105,7 +1124,7 @@ font-weight: 400;
     z-index: 99;
     background-color: white;
     padding-top: var(--section-padding);
-    color: black !important;
+    padding-bottom: var(--section-padding);
     overflow: hidden;
 }
 
@@ -1113,16 +1132,90 @@ font-weight: 400;
     padding: 0;
     background-color: white;
 }
-
-.hotel .gallery {
-    padding: 0;
-}
-
-.hotel .gallery-hotel {
+.rooms{
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
-
+.rooms .container .rooms-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+@media (max-width:532px){
+    .rooms .container{
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+.rooms .rooms-content .card{
+    position: relative;
+    transition: var(--main-transition);
+    overflow: hidden;
+}
+.rooms .rooms-content .card:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2),
+    0 0 20px rgba(0, 0, 0, .1);
+}
+.rooms .rooms-content .card:hover img{
+    transform: scale(1.2) rotate(.5deg);
+}
+.rooms-content .room-img{
+    overflow: hidden;
+}
+.rooms-content .room-img img{
+    max-width: 100%;
+    transition: var(--main-transition);
+}
+.rooms-content .room-text h3{
+    color: var(--secandcolor);
+    font-weight: 700;
+}
+.rooms-content .room-text span{
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--thirdcolor);
+}
+.rooms-content .room-text table tbody tr{
+    display: block;
+    font-size: 17px;
+    color: var(--thirdcolor);
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+}
+.rooms-content .room-text table tbody tr td:first-of-type{
+    width: 150px;
+  
+}
+.reserv{
+    margin: auto;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2),
+    0 0 5px rgba(0, 0, 0, .1);
+}
+.reserv p{
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    color: var(--p-color);
+}
+.reserv h3{
+    font-size: 20px;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    padding: 15px 50px;
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+    transition: var(--main-transition);
+}
+.reserv h3:hover{
+    background-color: transparent;
+}
+.reserv h3 i{
+    color: black;
+}
+.gallery-hotel{
+    background-color: var(--section-background);
+}
 /* end hotel */
 /* ============================================== */
 
@@ -1554,13 +1647,14 @@ font-weight: 400;
     position: fixed;
     bottom: 30px;
     right: 30px;
-    z-index: 999;
+    z-index: 9999;
     display: inline-block;
     width: 60px;
     height: 60px;
     background-color: var(--secandcolor);
     border-radius: 50% 50% 0%;
     transition: var(--main-transition);
+    cursor: pointer;
 }
 
 .popup-icon:hover {
@@ -1571,6 +1665,7 @@ font-weight: 400;
     background-color: transparent;
     outline: none;
     border: none;
+    cursor: pointer;
 }
 
 .modal-btn img {
