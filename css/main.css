@@ -1213,6 +1213,30 @@ transition: var(--main-transition);
 .reserv h3 i{
     color: black;
 }
+@media (max-width:992px){
+    .reserv .row{
+        flex-direction: column;
+       gap: 20px;
+    }
+}
+@media (max-width:768px){
+    .reserv{
+        width: 100%;
+    }
+    .reserv .row{
+        flex-direction: column;
+        padding: 1rem !important;
+        gap: 20px;
+    }
+    .reserv p{
+        font-size: 17px;
+    }
+    .reserv h3{
+        font-size: 20px;
+        padding: 15px 20px;
+      
+    }
+}
 .gallery-hotel{
     background-color: var(--section-background);
 }
