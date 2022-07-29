@@ -135,8 +135,8 @@ var carousel = function () {
     }
   })
   $('.user-content').owlCarousel({
-    animateOut: 'animate__fadeOut',
-    animateIn: 'animate__fadeIn',
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
     center: true,
     loop: true,
     items: 1,

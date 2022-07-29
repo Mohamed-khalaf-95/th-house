@@ -10,7 +10,7 @@ mohamed khalaf
 
 :root {
     --main-color: #f0d275;
-    --secandcolor:  #c8a97e;
+    --secandcolor: #c8a97e;
     --thirdcolor: #777;
     --fourth-color: #191919;
     --section-background-1: #191919b2;
@@ -204,11 +204,13 @@ hr {
 .main-title-2:hover {
     color: #191919;
 }
-.heading{
+
+.heading {
     padding: 0px 15px 30px;
     margin-bottom: 30px;
 }
-.special-heading{
+
+.special-heading {
     text-align: center;
     font-weight: normal;
     font-size: 100px;
@@ -217,7 +219,8 @@ hr {
     color: #c8a97e;
     font-family: "Great Vibes", cursive;
 }
-.sub-special-heading{
+
+.sub-special-heading {
     text-align: center;
     font-size: 50px;
     letter-spacing: 1.5px;
@@ -225,8 +228,9 @@ hr {
     line-height: 1.1;
     color: var(--thirdcolor);
 }
-@media (max-width:532px){
-    .sub-special-heading{
+
+@media (max-width:532px) {
+    .sub-special-heading {
         font-size: 30px;
         margin-top: -50px;
     }
@@ -545,22 +549,100 @@ hr {
     right: 0;
     border-radius: 50%;
 }
-.testimony .user-img .icon i{
+
+.testimony .user-img .icon i {
     color: white;
 }
-.testimony .user-text{
+
+.testimony .user-text {
     letter-spacing: 1.5px;
 }
-.testimony .user-text .user-disc{
-font-size: 17px;
-color: var(--thirdcolor);
+
+.testimony .user-text .user-disc {
+    font-size: 17px;
+    color: var(--thirdcolor);
 }
-.testimony .user-text .user-name{
-font-size: 22px;
-font-weight: 400;
+
+.testimony .user-text .user-name {
+    font-size: 22px;
+    font-weight: 400;
 }
-.testimony .owl-dots{
+
+.testimony .owl-dots {
     margin-top: 50px !important;
+}
+
+.testimony .owl-carousel .owl-stage {
+    padding: 20px 0;
+    transition: var(--main-transition);
+}
+
+.testimony .owl-carousel .owl-item {
+    padding: 30px 0;
+    transition: var(--main-transition);
+}
+
+.testimony .owl-carousel .center {
+    background-color: white !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2),
+        0 0 10px rgba(0, 0, 0, .1);
+    transition: var(--main-transition);
+}
+
+.testimony-form {
+    position: relative;
+    padding: 50px 20px;
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.testimony-form .stars-form i {
+    font-size: 30px;
+    cursor: pointer;
+  
+}
+.testimony-form form{
+    width: 70%;
+    margin: 30px auto;
+}
+@media (max-width:532px){
+    .testimony-form form{
+        width: 100%;
+    }
+    .testimony-form .title .special-heading{
+        font-size: 80px;
+    }
+}
+.testimony-form .form-fileds textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid var(--thirdcolor);
+    color: var(--thirdcolor);
+    outline: none;
+    transition: var(--main-color);
+}
+
+.testimony-form .form-fileds textarea:focus {
+    border-color: var(--main-color);
+}
+.testimony-form .form-fileds .btn{
+    position: relative;
+    padding: 10px 30px;
+    font-size: 18px;
+    color: black;
+    background-color: var(--main-color) ;
+    border: 1px solid var(--main-color);
+    border-radius: 50px;
+    margin-top: 10px;
+    overflow: hidden;
+    transition: var(--main-transition);
+}
+.testimony-form .form-fileds .btn:hover{
+    background-color: transparent;
+  
 }
 /* end about  */
 /* =================================================== */
@@ -577,12 +659,14 @@ font-weight: 400;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 20px;
 }
-@media (max-width:768px){
+
+@media (max-width:768px) {
     .services .container {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 10px;
-    } 
+    }
 }
+
 .services .card h2 {
     font-size: 30px;
     font-weight: 500;
@@ -605,26 +689,30 @@ font-weight: 400;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2), 0 0 0 rgba(0, 0, 0, .1);
     transform: scale(1.02);
 }
-.services .card i{
-transition: all .3s linear;
+
+.services .card i {
+    transition: all .3s linear;
 }
 
-.services .card:hover  i{
-color: white;
+.services .card:hover i {
+    color: white;
 }
-.services .card::before{
-content: "";
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: -1;
-transition: var(--main-transition);
+
+.services .card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: var(--main-transition);
 }
-.services .card:hover::before{
+
+.services .card:hover::before {
     box-shadow: inset 0 0 0 200px var(--main-color);
 }
+
 /* end services */
 /* start counter number  */
 /* Start Stats */
@@ -1132,73 +1220,88 @@ transition: var(--main-transition);
     padding: 0;
     background-color: white;
 }
-.rooms{
+
+.rooms {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
-.rooms .container .rooms-content{
+
+.rooms .container .rooms-content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
 }
-@media (max-width:532px){
-    .rooms .container{
+
+@media (max-width:532px) {
+    .rooms .container {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
-.rooms .rooms-content .card{
+
+.rooms .rooms-content .card {
     position: relative;
     transition: var(--main-transition);
     overflow: hidden;
 }
-.rooms .rooms-content .card:hover{
+
+.rooms .rooms-content .card:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, .2),
-    0 0 20px rgba(0, 0, 0, .1);
+        0 0 20px rgba(0, 0, 0, .1);
 }
-.rooms .rooms-content .card:hover img{
+
+.rooms .rooms-content .card:hover img {
     transform: scale(1.2) rotate(.5deg);
 }
-.rooms-content .room-img{
+
+.rooms-content .room-img {
     overflow: hidden;
 }
-.rooms-content .room-img img{
+
+.rooms-content .room-img img {
     max-width: 100%;
     transition: var(--main-transition);
 }
-.rooms-content .room-text h3{
+
+.rooms-content .room-text h3 {
     color: var(--secandcolor);
     font-weight: 700;
 }
-.rooms-content .room-text span{
+
+.rooms-content .room-text span {
     font-size: 17px;
     font-weight: 400;
     color: var(--thirdcolor);
 }
-.rooms-content .room-text table tbody tr{
+
+.rooms-content .room-text table tbody tr {
     display: block;
     font-size: 17px;
     color: var(--thirdcolor);
     margin-bottom: 20px;
     letter-spacing: 1.5px;
 }
-.rooms-content .room-text table tbody tr td:first-of-type{
+
+.rooms-content .room-text table tbody tr td:first-of-type {
     width: 150px;
-  
+
 }
-.reserv{
+
+.reserv {
     margin: auto;
     width: 80%;
     overflow: hidden;
     position: relative;
     box-shadow: 0 0 5px rgba(0, 0, 0, .2),
-    0 0 5px rgba(0, 0, 0, .1);
+        0 0 5px rgba(0, 0, 0, .1);
 }
-.reserv p{
+
+.reserv p {
     font-size: 25px;
     letter-spacing: 1.5px;
     color: var(--p-color);
 }
-.reserv h3{
+
+.reserv h3 {
     font-size: 20px;
     background-color: var(--main-color);
     border-radius: 50px;
@@ -1207,39 +1310,48 @@ transition: var(--main-transition);
     border: 1px solid var(--main-color);
     transition: var(--main-transition);
 }
-.reserv h3:hover{
+
+.reserv h3:hover {
     background-color: transparent;
 }
-.reserv h3 i{
+
+.reserv h3 i {
     color: black;
 }
-@media (max-width:992px){
-    .reserv .row{
+
+@media (max-width:992px) {
+    .reserv .row {
         flex-direction: column;
-       gap: 20px;
+        gap: 20px;
     }
 }
-@media (max-width:768px){
-    .reserv{
+
+@media (max-width:768px) {
+    .reserv {
         width: 100%;
     }
-    .reserv .row{
+
+    .reserv .row {
         flex-direction: column;
         padding: 1rem !important;
         gap: 20px;
     }
-    .reserv p{
+
+    .reserv p {
         font-size: 17px;
     }
-    .reserv h3{
+
+    .reserv h3 {
         font-size: 20px;
         padding: 15px 20px;
-      
+
     }
 }
-.gallery-hotel{
+
+.gallery-hotel {
     background-color: var(--section-background);
 }
+
 /* end hotel */
 /* ============================================== */
 
